@@ -1,7 +1,7 @@
-import { Helmet } from 'react-helmet-async';
-import { forwardRef, ReactNode } from 'react';
+import { Helmet } from "react-helmet-async";
+import { forwardRef, ReactNode } from "react";
 // @mui
-import { Box, BoxProps } from '@mui/material';
+import { Box, BoxProps } from "@mui/material";
 
 // ----------------------------------------------------------------------
 
@@ -10,13 +10,15 @@ interface PageProps extends BoxProps {
   title?: string;
 }
 
-const Page = forwardRef<HTMLDivElement, PageProps>(({ children, title = '', ...other }, ref) => (
-  <Box ref={ref} {...other}>
-    <Helmet>
-      <title>{`${title} | Minimal-UI`}</title>
-    </Helmet>
-    {children}
-  </Box>
-));
+const Page = forwardRef<HTMLDivElement, PageProps>(
+  ({ children, title = "", ...other }, ref) => (
+    <Box ref={ref} {...other}>
+      <Helmet>
+        <title>{`${title} | Minimal-UI-Demo`}</title>
+      </Helmet>
+      {children}
+    </Box>
+  )
+);
 
 export default Page;
